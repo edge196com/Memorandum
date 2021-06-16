@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
+<script>
+  function changecontent(newcontent) {
+    document.getElementById("myframe").src=newcontent;
+  }
+</script>
+<style>
 /* The sidenav */
 .sidenav {
   height: 100%;
@@ -22,8 +27,7 @@
   /*margin-left: 300px;  Same as the width of the sidenav */
   height: 500%;
   width: 1000px;
-}
-        
+}      
 </style>
 </head>
 <body oncontextmenu="return false;">
@@ -31,7 +35,7 @@
     <tr>
         <td width="400" height="500">
           <div id="mySidenav" class="sidenav">
-            <a href="Memorandum.html#summary">SUMMARY</a><br><br>
+            <a href="Memorandum.html#summary" value="Memorandum.html#summary" onclick="changecontent(value)">SUMMARY</a><br><br>
             <a href="Memorandum.html#problem">THE PROBLEM</a><br><br>
             <a href="Memorandum.html#solution">OUR SOLUTION</a><br><br> 
             <a href="Memorandum.html#benefits">BENEFITS</a><br><br>
@@ -51,7 +55,7 @@
         </td>
         <td>
           <div id="main">
-            <iframe src="Memorandum.html" style="pointer-events: none;"
+            <iframe id="myframe" src="Memorandum.html" style="pointer-events: none;"
             width="1000" 
             height="500"
             scrolling="yes">
