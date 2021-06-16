@@ -2,10 +2,13 @@
 <html>
 <head>
 <script>
-  function changecontent() {
-    var val = document.getElementById("mySidenav").value
-    document.getElementById("myframe").src=val;
-  }
+$(document).ready(function(){
+  $("a").click(function(e) {
+    e.preventDefault();
+
+    $("#MyFrame").attr("src", $(this).attr("href"));
+  })
+});
 </script>
 <style type="text/css">
   select {clear:both;}
@@ -39,7 +42,7 @@
     <tr>
         <td width="400" height="500">
           <div id="mySidenav" class="sidenav">
-            <a href="Memorandum.html#summary" value="https://edge196com.github.io/Memorandum/Memorandum.html#summary" onClick="changecontent()">SUMMARY</a><br><br>
+            <a href="Memorandum.html#summary" target="MyFrame">SUMMARY</a><br><br>
             <a href="Memorandum.html#problem">THE PROBLEM</a><br><br>
             <a href="Memorandum.html#solution">OUR SOLUTION</a><br><br> 
             <a href="Memorandum.html#benefits">BENEFITS</a><br><br>
@@ -60,6 +63,7 @@
         <td>
           <div id="main">
             <iframe id="myframe" src="Memorandum.html" style="pointer-events: none;"
+            name="MyFrame"
             width="920" 
             height="548"
             scrolling="yes">
