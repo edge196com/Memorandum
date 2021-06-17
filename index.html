@@ -14,10 +14,16 @@ $(document).ready(function(){
   select {clear:both;}
 </style>
 <style>
+.column {
+  float: left;
+  padding: 10px;
+  height: 550px; /* Should be removed. Only for demonstration */
+}
 /* The sidenav */
 .sidenav {
-  height: 100%;
-  width: 160px;
+  /*height: 100%;
+  width: 160px;*/
+  width: 20%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -25,15 +31,17 @@ $(document).ready(function(){
   background-color: darkblue;
   overflow-x: hidden;
   padding-top: 10px;
+  padding-left: 10px;
   text-decoration:none;
   color: white;
 }
 
 /* Page content */
 .main {
-  /*margin-left: 300px;  Same as the width of the sidenav */
-  height: 500%;
-  width: 900px;
+ margin-left: 275px;  Same as the width of the sidenav */
+ width: 80%;
+ /* height: 500%;
+  width: 1000px;*/
 }      
 </style>
 <style>
@@ -50,13 +58,16 @@ a:visited {
 a:hover+div {
   display: block;
 }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style>
 </head>
 <body oncontextmenu="return false;">
-<table width="1100" height="548">
-    <tr>
-        <td width="500" height="500" align="center">
-          <div id="mySidenav" class="sidenav">
+ <div class="row">
+  <div class="sidenav" style="background-color: darkblue">
             <a href="Memorandum.html#summary" target="MyFrame">SUMMARY</a><br><br>
             <a href="Memorandum.html#problem" target="MyFrame">THE PROBLEM</a><br><br>
             <a href="Memorandum.html#solution" target="MyFrame">OUR SOLUTION</a><br><br> 
@@ -73,24 +84,15 @@ a:hover+div {
             <a href="Memorandum.html#projections" target="MyFrame">PROJECTIONS</a><br><br>
             <a href="Memorandum.html#risk_factors" target="MyFrame">RISK FACTORS</a><br><br>
             <a href="Memorandum.html#contact_information" target="MyFrame">CONTACT INFORMATION</a><br><br>
-           </div>
-        </td>
-        <td width="300px">&nbsp;</td>
-        <td align="right">
-          <div id="main">
-            <iframe id="myframe" src="Memorandum.html" style="pointer-events: none;"
+  </div>
+  <div class="main" style="background-color: white">
+             <iframe id="myframe" src="Memorandum.html" style="pointer-events: none;"
             name="MyFrame"
             frameBorder="0"
-            width="940" 
-            height="550"
+            width="985" 
+            height="557"
             scrolling="yes">
-          </div>
-        </td>
-        <td class="sidenav">
-          <div>
-          </div>
-        </td>
-    </tr>
-</table>
+  </div>
+</div>
 </body>
 </html>
