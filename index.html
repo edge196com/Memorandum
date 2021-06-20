@@ -19,8 +19,17 @@ $(document).ready(function(){
   padding: 10px;
   height: 550px; /* Should be removed. Only for demonstration */
 }
+
+.panel {
+padding: 0 18px;
+background-color: white;
+max-width: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+}
+
 /* The sidenav */
-.sidenav {
+.accordian {
   /*height: 100%;
   width: 160px;*/
   width: 19%;
@@ -34,6 +43,22 @@ $(document).ready(function(){
   padding-left: 18px;
   text-decoration:none;
   color: white;
+}
+
+.active, .accordian:hover {
+  background-color: white;
+}
+
+.accordian:after {
+  content: '\002b';
+  color:#777;
+  font-weight: bold;
+ float: right;
+ margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
 }
 
 /* Page content */
@@ -68,7 +93,9 @@ a:hover+div {
 <body oncontextmenu="return false;">
  <div class="row">
   <div class="sidenav" style="background-color: darkblue">
-            <a href="Memorandum.html#summary" target="MyFrame">SUMMARY</a><br><br>
+            <button class="accordian"><a href="Memorandum.html#summary" target="MyFrame">SUMMARY</a></button>
+            <div class="panel">Test</div>
+            <br><br>
             <a href="Memorandum.html#problem" target="MyFrame">THE PROBLEM</a><br><br>
             <a href="Memorandum.html#solution" target="MyFrame">OUR SOLUTION</a><br><br> 
             <a href="Memorandum.html#benefits" target="MyFrame">BENEFITS</a><br><br>
