@@ -1,144 +1,38 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
+<title>EDGE196 Memorandum</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>
 $(document).ready(function(){
   $("a").click(function(e) {
     e.preventDefault();
 
-    $("#MyFrame").attr("src", $(this).attr("href"));
+    $("#main").attr("src", $(this).attr("href"));
   })
 });
 </script>
-<style type="text/css">
-  select {clear:both;}
-</style>
+<script language="javascript">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+</script>
 <style>
-.column {
-  float: left;
-  padding: 10px;
-  height: 550px; /* Should be removed. Only for demonstration */
-}
-
-.panel {
-padding: 0 18px;
-background-color:white;
-max-width: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-}
-
-/* The sidenav */
-.accordian {
-  /*height: 100%;
-  width: 160px;*/
-  width: 19%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: darkblue;
-  overflow-x: hidden;
-  padding-top: 10px;
-  padding-left: 18px;
-  text-decoration:none;
-  color: white;
-  transition:0.4s;
-}
-
-.active, .accordian:hover {
-  background-color: #ccc;
-}
-
-.accordian:after {
-  content: '\002b';
-  color:#777;
-  font-weight: bold;
- float: right;
- margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-/* Page content */
-.main {
- margin-left: 268px;  /*Same as the width of the sidenav */
- width: 75%;
- /* height: 500%;
-  width: 1000px;*/
-}      
-</style>
-<style>
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-} 
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover+div {
-  display: block;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.body {
+background-color: #111A44;
 }
 </style>
 </head>
-<body oncontextmenu="return false;">
- <div class="row">
-  <div class="sidenav" style="background-color: darkblue">
-            <button class="accordian"><a href="Memorandum.html#summary" target="MyFrame">SUMMARY</a></button>
-            <div class="panel">Test1</div>
-            <br><br>
-            <button class="accordian"><a href="Memorandum.html#problem" target="MyFrame">THE PROBLEM</a></button>
-            <div class="panel">Test2</div>
-            <br><br>
-            <a href="Memorandum.html#solution" target="MyFrame">OUR SOLUTION</a><br><br> 
-            <a href="Memorandum.html#benefits" target="MyFrame">BENEFITS</a><br><br>
-            <a href="Memorandum.html#digital_assets" target="MyFrame">DIGITAL ASSETS</a><br><br>  
-            <a href="Memorandum.html#genesis_offer" target="MyFrame">GENESIS OFFER</a><br><br>
-            <a href="Memorandum.html#Momentum_sales" target="MyFrame">MOMENTUM SALES</a><br><br>
-            <a href="Memorandum.html#universal_swap" target="MyFrame">UNIVERSAL SWAP</a><br><br>
-            <a href="Memorandum.html#power_staking" target="MyFrame">POWER STAKING</a><br><br>
-            <a href="Memorandum.html#marketplace" target="MyFrame">MARKETPLACE</a><br><br>
-            <a href="Memorandum.html#whitelist" target="MyFrame">WHITELIST</a><br><br>
-            <a href="Memorandum.html#3ms" target="MyFrame">THE 3-M'S</a><br><br>
-            <a href="Memorandum.html#about" target="MyFrame">ABOUT</a><br><br>
-            <a href="Memorandum.html#projections" target="MyFrame">PROJECTIONS</a><br><br>
-            <a href="Memorandum.html#risk_factors" target="MyFrame">RISK FACTORS</a><br><br>
-            <a href="Memorandum.html#contact_information" target="MyFrame">CONTACT INFORMATION</a><br><br>
-  </div>
-  <div class="main" style="background-color: white">
-             <iframe id="myframe" src="Memorandum.html" style="pointer-events: none;"
-            name="MyFrame"
-            frameBorder="0"
-            width="1000" 
-            height="557"
-            scrolling="yes">
-  </div>
-</div>
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    });
-  }
-  </script>  
+<body class="body" oncontextmenu="return false;">
+<table align="center" height="562">
+<tr>
+<td>
+<iframe src="nav.html" width="300px" height="560" frameBorder="0"></iframe>
+</td>
+<td>
+<iframe id="results" name="resultspage" src="pages/Confidential_Information_Memorandum_1.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" width="795px" height="562" frameBorder="0"></iframe>
+</td>
+</tr>
+</table>
 </body>
 </html>
