@@ -17,19 +17,19 @@
 }
 
 .active, .accordion:hover {
-  background-color: #111A44;
+  background-color: #F04B23;
 }
 
 .accordion:after {
-  content: '\002B';
-  color: #777;
+  content: 'ᐅ';
+  color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
-  content: "\2212";
+  content: "ᐁ";
 }
 
 .panel {
@@ -82,6 +82,7 @@ a:hover+div {
   clear: both;
 }
 </style>
+
 </head>
 <body class="body" oncontextmenu="return false;">
 
@@ -89,7 +90,7 @@ a:hover+div {
 
 <button class="accordion"><a href="pages/Contents_2.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Content Index</a></button>
 
-<button class="accordion"><a href="pages/Summary_3.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Summary</a></button>
+<button class="accordion" id="summary"><a href="pages/Summary_3.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Summary</a></button>
 <div class="panel">
   <p>
   <a href="pages/Overview_4.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Overview</a>
@@ -101,7 +102,7 @@ a:hover+div {
   <p>
   <a href="pages/The_Problem_6.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">The Problem ... Page 6</a><br>
   <a href="pages/The_Current_State_of_the_Startup_Ecosystem_7.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">State of the Start Up Ecosystem</a><br>
-  <a href="pages/Challenges_Facing_Startips_page_2_8.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Challenges Facing Startups page 2</a><br>
+  <a href="pages/Challenges_Facing_Startips_page_2_8.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Challenges Facing Startups</a><br>
   <a href="pages/Venture_Capital_Myths_and_Truths__9.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Venture Capital Myths and Truths</a><br>
   <a href="pages/Lack_VC_Innovation_10.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage"> The Lack of VC Innovations</a><br>
   <a href="pages/Is_There_Any_Hope_For_Startups_11.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Is ther Hope for Startups</a><br>
@@ -109,7 +110,7 @@ a:hover+div {
   </p>
 </div>
 
-<button class="accordion"><a href="pages/Our_Solution_13.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Our Solution</a></button>
+<button class="accordion" id="accordion5"><a href="pages/Our_Solution_13.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Our Solution</a></button>
 <div class="panel">
   <p>
   <a href="pages/Our_Solution_14.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Our Solution ... Page 14</a><br>
@@ -283,7 +284,6 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
-	myFunction();
   });
 }
 
