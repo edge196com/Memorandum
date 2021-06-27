@@ -72,6 +72,8 @@ a:hover+div {
 }
 </style>
 
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+	
 </head>
 <body class="body" oncontextmenu="return false;">
 
@@ -265,21 +267,19 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 var currentActive;
 var toggleAccordionState = function(accordion) {
- 			accordion.classList.toggle("active");
+      accordion.classList.toggle("active");
       accordion.nextElementSibling.classList.toggle("show");
 };
-	
 
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
         if(currentActive) {
-       	 toggleAccordionState(currentActive);
+        toggleAccordionState(currentActive);
         }
         toggleAccordionState(this);
         currentActive = this;        
   }
 }
-
 </script>
 </body>
 </html>
