@@ -72,6 +72,8 @@ a:hover+div {
 }
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body class="body" oncontextmenu="return false;">
 
@@ -263,17 +265,33 @@ a:hover+div {
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
-	
+
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+    acc[i].onclick = function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+    if (panel.style.maxHeight){
+        panel.style.maxHeight = null;  // Collapse clicked panel
     } 
-  });
+    else { // expand clicked panel
+	    (this).style.backgroundColor = "#F04B23"; // Active tag
+		(this).style.content = "\1401";
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        collapseOthers(this);
+    } 
+    }
+}
+
+// Collapse all other accordions except the clicked one
+function collapseOthers(clickedAccor) {
+    var accs = document.getElementsByClassName("accordion");
+    for (var i = 0; i < accs.length; i++) {
+        if (accs[i] != clickedAccor) {
+           accs[i].nextElementSibling.style.maxHeight = null;
+		   accs[i].style.backgroundColor = "#111A44"; // Inactive tag
+		   accs[i].style.content = "&#5125";
+        }
+    }
 }
 </script>
 </body>
