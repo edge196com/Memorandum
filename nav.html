@@ -20,9 +20,10 @@
   font: muli regular;
 }
 
-.active, .accordion:hover, p a:hover, p a:focus {
+.active, .accordion:hover, .panel a:hover, .panel a:focus {
   background-color: #F04B23;
-  width: 100%;
+  max-width: 300px;
+  display: block;
 }
  
 .accordion:after {
@@ -38,7 +39,7 @@
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 0 0;
   background-color: #67667E;
   max-height: 0;
   overflow: hidden;
@@ -53,7 +54,7 @@ background-color: #111A44;
 }
 
 p {
-align: left;
+text-indent: 18px;
 }
 
 h2 {
@@ -75,9 +76,7 @@ a:link {
   background-color: transparent;
   text-decoration: none;
 } 
-a:hover+div {
-  display: block;
-}
+
 .row:after {
   content: "";
   display: table;
@@ -124,7 +123,6 @@ height: 100%;
 @media (min-width:960px) { body {font-size:1.2rem;} } 
 @media (min-width:1100px) { body {font-size:1.5rem;} } 
 
-
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .main {
@@ -141,12 +139,10 @@ height: 100%;
     width: 100%;
   }
 }
-
 </style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 </head>
+	
 <body class="body" oncontextmenu="return false;">
 <h2><u>Table of Contents</u></h2>
 
@@ -164,15 +160,13 @@ height: 100%;
 
 <button class="accordion"><a href="pages/The_Problem_5.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">The Problem</a></button>
 <div class="panel">
-  <p>
-  <a href="pages/The_Problem_6.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">The Problem</a><br><br>
-  <a href="pages/The_Current_State_of_the_Startup_Ecosystem_7.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">State of the Start Up Ecosystem</a><br><br>
-  <a href="pages/Challenges_Facing_Startips_page_2_8.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Challenges Facing Startups</a><br><br>
-  <a href="pages/Venture_Capital_Myths_and_Truths__9.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Venture Capital Myths and Truths</a><br><br>
-  <a href="pages/Lack_VC_Innovation_10.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage"> The Lack of VC Innovations</a><br><br>
-  <a href="pages/Is_There_Any_Hope_For_Startups_11.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Is ther Hope for Startups</a><br><br>
-  <a href="pages/But...Many_Startups_Do_Succeed_12.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">But...Many Startups Do Succeed</a><br>
-  </p>
+  <p><a href="pages/The_Problem_6.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">The Problem</a><br><br>
+  <p><a href="pages/The_Current_State_of_the_Startup_Ecosystem_7.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">State of the Start Up Ecosystem</a></p>
+  <p><a href="pages/Challenges_Facing_Startips_page_2_8.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Challenges Facing Startups</a></p>
+  <p><a href="pages/Venture_Capital_Myths_and_Truths__9.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Venture Capital Myths and Truths</a></p>
+  <p><a href="pages/Lack_VC_Innovation_10.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage"> The Lack of VC Innovations</a></p>
+  <p><a href="pages/Is_There_Any_Hope_For_Startups_11.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Is ther Hope for Startups</a></p>
+  <p><a href="pages/But...Many_Startups_Do_Succeed_12.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">But...Many Startups Do Succeed</a></p>
 </div>
 
 <button class="accordion"><a href="pages/Our_Solution_13.pdf#zoom=70&toolbar=0&navpanes=0&scrollbar=0" target="resultspage">Our Solution</a></button>
